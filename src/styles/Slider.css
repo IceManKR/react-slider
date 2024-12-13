@@ -1,0 +1,52 @@
+/* src/styles/Slider.css */
+
+/* Ensuring the body covers the entire viewport and has a black background */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black; /* Black background */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to the top of the viewport */
+    overflow: hidden; /* Prevent scrolling */
+  }
+  
+  /* Slider container that allows the images to scroll infinitely */
+  .slider {
+    position: relative;
+    width: 80vw; /* Adjust width to 80% of the viewport width */
+    height: 50vh; /* Adjust height to 50% of the viewport height */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20vh auto; /* Move slider down by 20% of the viewport height */
+  }
+  
+  /* Inner container that moves according to the scroll */
+  .slider__inner {
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform 0.3s ease-out;
+  }
+  
+  /* Each image container */
+  .slide {
+    flex-shrink: 0;
+    width: 600px; /* Width of each image */
+    height: 400px; /* Height of each image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px; /* Gap between images */
+  }
+  
+  /* Image styling to make them fit the container */
+  .slide__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure images fill the space without distortion */
+    display: block;
+  }
+  
